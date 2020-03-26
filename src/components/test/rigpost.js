@@ -1402,7 +1402,7 @@ class Rigpost extends Component {
     
     if(this.state.cpuscore != ''){
         summary = <div styles={{display: 'flex', justifyContent:'space-around',  fontFamily: 'Tomorrow'}}> 
-                  <h3>{cpudif}</h3>
+                  <h3>{cpudif < 0 ? <div style={{color:'#f01818', textAlign: 'center'}}> {parseInt(cpudif)}% </div> : <div style={{color:'green', textAlign: 'center'}}> +{parseInt(cpudif)}% </div> } </h3>
                   <h3>{this.state.gpuscore - this.state.gamegpuscore}</h3>
                   <h3>{this.state.ramscore - this.state.gamememscore}</h3> 
                   </div>
