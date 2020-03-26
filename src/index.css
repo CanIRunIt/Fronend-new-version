@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;/* 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
+  background: url(/img/mario-bg.png) no-repeat;
+  background-size: 100%;
+  background-position:bottom;
+/*   background: linear-gradient(to right, #000000, #0f9b0f); */
+  background: linear-gradient(to right, #fcee09, #fcee09); 
+  /* background: linear-gradient(to right, #1fa2ff, #12d8fa, #a6ffcb); */
+  min-height: 100%;
+}
+
+html {
+  min-height: 100%;
+}
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+form {
+  font-family: 'ZCOOL QingKe HuangYou' ;
+  margin: 60px;
+  padding: 20px;
+}
+
+form button, form h5 {
+  padding: 10px;
+  margin: 20px;
+}
+
+.rigform {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-family: 'ZCOOL QingKe HuangYou' ;
+  flex-flow: column
+
+}
+
+.rigscore {
+  text-align: center;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  font-family: 'ZCOOL QingKe HuangYou' ;
+  flex-flow: column
+}
+
+.gamedynamic {
+  
+  font-family: 'ZCOOL QingKe HuangYou' ;
+}
+
+.gamedynamic input-field {
+  text-align: center;
+  width: 60%
+}
+
+.gametitle {
+  
+  font-family: 'ZCOOL QingKe HuangYou' ;
+  color: white
+}
+
+.Toolbox {
+  background: linear-gradient(to right, #000000, #0f9b0f);
+}
+
+@media only screen and (min-width: 600px) {
+  .Toolbox {
+      display: none
+  }
+}
+
+.Menu {
+  color: white
+
+}
+
+@media only screen and (max-width: 601px) {
+  .Menu {
+      display: none;
+  }
+}
