@@ -1383,6 +1383,8 @@ class Rigpost extends Component {
 
 
     render () {
+    
+    let cpudif = this.state.cpuscore/14.13 - this.state.gamecpuscore/14.13
 
     let gamerigscore = <div className="container" style={{display: 'flex', justifyContent:'space-around', color: 'black', fontFamily: 'Tomorrow'}}  ><RequestProgress></RequestProgress></div>
 
@@ -1395,7 +1397,16 @@ class Rigpost extends Component {
         gpuscore={this.state.gamegpuscore / 95.55}
         ramscore={this.state.gamememscore / 0.16}></GamerigScore>
     }
-        
+
+    let summary = null
+    
+    if(this.state.cpuscore != ''){
+        summary = <div styles={{display: 'flex', justifyContent:'space-around',  fontFamily: 'Tomorrow'}}> 
+                  <h3>{cpudif}</h3>
+                  <h3>{this.state.gpuscore - this.state.gamegpuscore}</h3>
+                  <h3>{this.state.ramscore - this.state.gamememscore}</h3> 
+                  </div>
+    }
     const { selectedOption } = this.state;
     const { selectedOptioncpu } = this.state;
     const { selectedOptionram } = this.state;
@@ -1441,7 +1452,9 @@ class Rigpost extends Component {
                 gpuscore={this.state.gpuscore / 95.55}
                 /> : null }
         
-        
+        {summary}
+
+
             <form onSubmit={this.handlePost} className={styles.form}>
             <h5 className="grey-text text-darken-3" style={{ textAlign: 'center' }}>Can I run it</h5>
             
