@@ -1385,6 +1385,8 @@ class Rigpost extends Component {
     render () {
     
     let cpudif = this.state.cpuscore/14.13 - this.state.gamecpuscore/14.13
+    let gpudif = this.state.gpuscore/95.55 - this.state.gamegpuscore/95.55
+    let ramdif = this.state.ramscore/0.16 - this.state.gamememscore/0.16
 
     let gamerigscore = <div className="container" style={{display: 'flex', justifyContent:'space-around', color: 'black', fontFamily: 'Tomorrow'}}  ><RequestProgress></RequestProgress></div>
 
@@ -1402,9 +1404,9 @@ class Rigpost extends Component {
     
     if(this.state.cpuscore != ''){
         summary = <div styles={{display: 'flex', justifyContent:'space-around',  fontFamily: 'Tomorrow'}}> 
-                  <h3>{cpudif < 0 ? <div style={{color:'#f01818', textAlign: 'center'}}> {parseInt(cpudif)}% </div> : <div style={{color:'green', textAlign: 'center'}}> +{parseInt(cpudif)}% </div> } </h3>
-                  <h3>{this.state.gpuscore - this.state.gamegpuscore}</h3>
-                  <h3>{this.state.ramscore - this.state.gamememscore}</h3> 
+                  <h3>{cpudif < 0 ? <div style={{color:'#f01818', textAlign: 'center',  fontFamily: 'Tomorrow'}}>CPU:  {parseInt(cpudif)}% </div> : <div style={{color:'green', textAlign: 'center',  fontFamily: 'Tomorrow'}}>CPU:  +{parseInt(cpudif)}% </div> } </h3>
+                  <h3>{gpudif < 0 ? <div style={{color:'#f01818', textAlign: 'center',  fontFamily: 'Tomorrow'}}>GPU:  {parseInt(gpudif)}% </div> : <div style={{color:'green', textAlign: 'center',  fontFamily: 'Tomorrow'}}>GPU:   +{parseInt(gpudif)}% </div> } </h3>
+                  <h3>{ramdif < 0 ? <div style={{color:'#f01818', textAlign: 'center',  fontFamily: 'Tomorrow'}}>RAM:  {parseInt(ramdif)}% </div> : <div style={{color:'green', textAlign: 'center',  fontFamily: 'Tomorrow'}}>RAM:   +{parseInt(ramdif)}% </div> } </h3> 
                   </div>
     }
     const { selectedOption } = this.state;
