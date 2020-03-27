@@ -93,3 +93,7 @@ form button, form h5 {
       display: none;
   }
 }
+
+.form {
+  display: inline;
+}

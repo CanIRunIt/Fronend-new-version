@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import fire from '../../config/fire';
 import { connect } from 'react-redux';
+import styles from './sign.module.css';
 
 class Signin extends Component{
 
@@ -44,7 +45,7 @@ class Signin extends Component{
 
     render() {
         return(
-            <div className="container" style={{marginTop: '9%', fontFamily: 'Tomorrow'}}>
+            <div className={styles} style={{marginTop: '9%', fontFamily: 'Tomorrow'}}>
             
             <form className="white" style={{fontFamily: 'Tomorrow'}}>
           <h5 style={{marginBottom: '3px', textAlign: 'center', fontFamily: 'Tomorrow'}}>Sign In</h5>
@@ -53,8 +54,8 @@ class Signin extends Component{
            
              <label htmlFor="password">password</label>
              <input type ="text" id="password" onChange={this.handleChnge}></input>
-             <button className="pink lighten-1" type="submit" onClick={this.signin} /* onClick={() => this.props.onUserSign(this.state.mail)} */ >Sign In</button>
-             <button className="yellow lighten-3" onClick={() => this.props.onUserSign(this.state.mail)}>Choose Rig</button>
+             <button className={styles.btn} type="submit" onClick={this.signin} /* onClick={() => this.props.onUserSign(this.state.mail)} */ >Sign In</button>
+            {/*  <button className="yellow lighten-3" onClick={() => this.props.onUserSign(this.state.mail)}>Choose Rig</button> */}
              </form>
 
              </div>

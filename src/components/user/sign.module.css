@@ -35,6 +35,7 @@ border-bottom: 1px solid #000;   */
       .btn {
           text-decoration: none;
           width: 548px;
+          height: 19px;
           margin-top: 19px;
         display: flex;
         align-items: center;
@@ -42,7 +43,7 @@ border-bottom: 1px solid #000;   */
         border: 1;
         border-color: #050a0e;
         outline: none;
-        background-color: var(--red-color);
+        background-color: var(--yellow-color);
         color: var(--black-color);
         cursor: pointer;
         padding: 20px 25px;
@@ -71,7 +72,7 @@ border-bottom: 1px solid #000;   */
         position: absolute;
         top: -14px;
         right: -13px;
-        background-color: var(--yellow-color);
+        background-color: white;
         border-bottom: 2px solid var(--black-color);
         transform: rotate(45deg);
       }
@@ -132,7 +133,7 @@ border-bottom: 1px solid #000;   */
           font-size: 19px;
         }
         .btn {
-          width: 199px;
+          width: 119px;
         }
         .input-field {
           padding-left: 3px;

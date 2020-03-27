@@ -1457,7 +1457,7 @@ class Rigpost extends Component {
         {summary}
 
 
-            <form onSubmit={this.handlePost} className={styles.form}>
+            <form onSubmit={this.handlePost} className="container">
             <h5 className="grey-text text-darken-3" style={{ textAlign: 'center' }}>Can I run it</h5>
             
             

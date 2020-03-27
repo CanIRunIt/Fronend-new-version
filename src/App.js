@@ -77,7 +77,7 @@ class App extends Component {
     <div>
     <BrowserRouter>
     <div className="App">
-     <Navbar className="hcolor" user={this.state.user}></Navbar>
+     <Navbar className="hcolor" user={this.state.user} userinit={this.state.useremail}></Navbar>
      <Switch>
      <Route exact path='/' component={Home}></Route>
      <Route path='/runtest' component={Rigform}></Route>

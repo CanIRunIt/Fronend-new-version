@@ -9,19 +9,19 @@ const Navbar = (props) => {
     return (
         <div>
         <nav className="nav-wrapper hcolor">{/*  */}
-       {/*  <div className="container"> */}
+        <div className="container"> 
         <ResponsiveDrawer user={props.user}></ResponsiveDrawer>
         <div className="Menu">
         <Link to='/' className="brand-logo left" style={{textDecoration: 'none'}}>
         Can I Run it
         </Link>
         {props.user ?
-        <Signedinlinks ></Signedinlinks> :
+        <Signedinlinks initbox={props.userinit} ></Signedinlinks> :
         /* <Signedinlinks1></Signedinlinks1> :
         */ <Signedoutlinks ></Signedoutlinks> }
         </div>
       
-       {/*  </div> */}
+       </div> 
         </nav>
         </div>
 

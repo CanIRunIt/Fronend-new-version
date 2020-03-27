@@ -92,7 +92,9 @@
         font-family: Tomorrow, sans-serif;
         
         color: #050a0e;
-        font-size: 60px;
+        font-size: 80px;
+        margin-bottom: 17%;
+        margin-top: 10%;
 
         
        /*  padding: 200px 198px; */
@@ -263,7 +265,7 @@
         justify-content: space-around;
           font-size: 48px;
           padding-top: 30%;
-          padding-bottom: 60%
+          padding-bottom: 35%
         }
         .btn {
           padding-bottom: 3px;

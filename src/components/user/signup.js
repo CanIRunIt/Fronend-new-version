@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import fire from '../../config/fire';
+import styles from './sign.module.css';
 
 class Signup extends Component{
 
@@ -51,7 +52,7 @@ class Signup extends Component{
 
     render() {
         return(
-            <div className="container" style={{marginTop: '9%', fontFamily: 'Tomorrow'}}>
+            <div className={styles} style={{marginTop: '9%', fontFamily: 'Tomorrow'}}>
             
             <form className="white" style={{fontFamily: 'Tomorrow'}}>
           
@@ -61,7 +62,7 @@ class Signup extends Component{
            
              <label htmlFor="password">password</label>
              <input type ="text" id="password" onChange={this.handleChnge}></input>
-             <button className="pink lighten-1" type="submit" onClick={this.signup}>Sign Up</button>
+             <button className={styles.btn} type="submit" onClick={this.signup}>Sign Up</button>
              </form>
 
              </div>
