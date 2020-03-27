@@ -29,6 +29,9 @@ border-bottom: 1px solid #000;   */
 
       }
       
+      
+
+
       .btn {
           text-decoration: none;
           width: 548px;
@@ -107,10 +110,31 @@ border-bottom: 1px solid #000;   */
 
       .form {
         font-family: Tomorrow, sans-serif;
-        color: #050a0e;       
+        color: #050a0e;
+        display: inline; 
+        padding-left: 3px;
+        margin-left: 3px;      
       }
 
       .form button {
           background-color: #ff003c;
           width: 100%
+      }
+
+      @media only screen and (max-width: 600px){
+        .rig {
+          font-size: 28px;
+        }
+        .rig h1 {
+          font-size: 19px;
+        }
+        .topic {
+          font-size: 19px;
+        }
+        .btn {
+          width: 199px;
+        }
+        .input-field {
+          padding-left: 3px;
+        }
       }

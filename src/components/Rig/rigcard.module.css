@@ -29,3 +29,17 @@
     font-size: .85rem;
     text-transform: uppercase;
   }
+
+  .rigspecs {
+    color: #00ff9f;
+  }
+
+  .rig {
+    font-size: 36px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .rig {
+      font-size: 19px
+    }
+  }

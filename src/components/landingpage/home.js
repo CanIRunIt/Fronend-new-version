@@ -15,7 +15,7 @@ class Home extends Component {
             className="mainpic">
             </img> */}
             <h3 className={styles.topic}>CAN I RUN IT<span className={styles.score}>_</span> </h3>
-           <Link style={{textDecoration: 'none'}} to='/gameswitch'> {/*  <h1>TEST NOW</h1> */}<div className="container" style={{textDecoration : 'none',textAlign: 'center', display: 'flex', justifyContent: 'space-around',  width: '696px' }}>
+           <Link style={{textDecoration: 'none'}} to='/gameswitch'> {/*  <h1>TEST NOW</h1> */} <div className="container" style={{textDecoration : 'none',textAlign: 'center', display: 'flex', justifyContent: 'space-around'}}>
             <button to='/gameswitch' className={styles.btn}>
             <span class={styles.btn__content}>
             Test from 10000+ games_
@@ -25,6 +25,7 @@ class Home extends Component {
             </button>
             </div>
             </Link>
+           
             {/* 
             </Link> */}
 

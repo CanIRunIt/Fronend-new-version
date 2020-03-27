@@ -8,8 +8,8 @@ import ResponsiveDrawer from './toolbox';
 const Navbar = (props) => {
     return (
         <div>
-        <nav className="nav-wrapper hcolor">
-        <div className="container">
+        <nav className="nav-wrapper hcolor">{/*  */}
+       {/*  <div className="container"> */}
         <ResponsiveDrawer user={props.user}></ResponsiveDrawer>
         <div className="Menu">
         <Link to='/' className="brand-logo left" style={{textDecoration: 'none'}}>
@@ -21,7 +21,7 @@ const Navbar = (props) => {
         */ <Signedoutlinks ></Signedoutlinks> }
         </div>
       
-        </div>
+       {/*  </div> */}
         </nav>
         </div>
 

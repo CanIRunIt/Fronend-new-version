@@ -95,7 +95,7 @@
         font-size: 60px;
 
         
-        padding: 200px 198px;
+       /*  padding: 200px 198px; */
         animation: anim-topic 2s linear 0s infinite
       }
 
@@ -254,5 +254,21 @@
         to {
           clip-path: polygon(0 0, 0 0, 0 0, 0 0);
           opacity: 1;
+        }
+      }
+
+      @media only screen and (max-width: 601px) {
+        .topic {
+          display: block;
+        justify-content: space-around;
+          font-size: 48px;
+          padding-top: 30%;
+          padding-bottom: 60%
+        }
+        .btn {
+          padding-bottom: 3px;
+          width: 256px;
+         padding-left: 10px;
+         padding-right: 10px
         }
       }

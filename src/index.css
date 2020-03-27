@@ -73,7 +73,8 @@ form button, form h5 {
 .Toolbox {
   /* background: linear-gradient(to right, #000000, #0f9b0f); */
   
-  background: linear-gradient(to right, #fcee09, #fcee09); 
+  background: linear-gradient(to right, #fcee09, #fcee09);
+  display: inline 
 }
 
 @media only screen and (min-width: 600px) {

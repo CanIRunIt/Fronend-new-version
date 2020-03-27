@@ -9,7 +9,8 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { lightGreen } from '@material-ui/core/colors';
 import { blue } from '@material-ui/core/colors';
-
+import { StylesContext } from '@material-ui/styles';
+import styles from './rigcard.module.css';
 
 
 const useStyles = makeStyles({
@@ -40,7 +41,7 @@ export default function MediaCard(props) {
         />
         <CardContent >
           
-          <Typography style={{fontFamily: 'Tomorrow'}} variant="h2" color="textSecondary" component="p">
+          {/* <Typography style={{fontFamily: 'Tomorrow'}} variant="h2" color="textSecondary" component="p">
            Processor  <div style={{color: 'darkgrey'}}> {props.cpu}  </div>
           </Typography>
           <Typography style={{fontFamily: 'Tomorrow'}} variant="h2" color="textSecondary" component="p">
@@ -54,15 +55,21 @@ export default function MediaCard(props) {
           </Typography>
           <Typography style={{fontFamily: 'Tomorrow'}} variant="h2" color="textSecondary" component="p">
             Operating System <div style={{color: 'darkgrey'}}> {props.os} </div>
-          </Typography>
+          </Typography> */}
+
+          <div class={styles.rig} align="left">Processor: <span className={styles.rigspecs}>{props.cpu}</span> </div>
+          <div class={styles.rig} align="left">Graphics: <span className={styles.rigspecs}>{props.gpu}</span> </div>
+          <div class={styles.rig} align="left">Memory: <span className={styles.rigspecs}>{props.ram}</span> </div>
+          <div class={styles.rig} align="left">Hard Disk: <span className={styles.rigspecs}>{props.hd}</span> </div>
+          <div class={styles.rig} align="left">Operating System: <span className={styles.rigspecs}>{props.os}</span> </div>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
+        <Button style={{fontFamily: 'Tomorrow'}} size="small" color="primary">
           Share
         </Button>
-        <Button size="medium" color="primary">
-          Get Score
+        <Button style={{fontFamily: 'Tomorrow'}} size="medium" color="primary">
+          Upgrade
         </Button>
       </CardActions>
     </Card>
