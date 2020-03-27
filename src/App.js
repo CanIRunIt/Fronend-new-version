@@ -23,6 +23,7 @@ import MediaCard from '../src/components/Rig/rigcard';
 import Userrigscore from '../src/components/userrig/userrigscore';
 import CircularIndeterminate from './components/ui/progress';
 import Gameswitch from './components/games/gameswitch';
+import Rigbuilder from './components/Rigbuilder/rigbuilder';
 
 
 
@@ -95,6 +96,7 @@ class App extends Component {
     <Route path='/myrigscore' component={Userrigscore}></Route>
     <Route path='/progress' component={CircularIndeterminate}></Route>
     <Route path='/gameswitch' component={Gameswitch}></Route>
+    <Route path='/rigbuilder' component={Rigbuilder}></Route>
     
     
      {/* <Route  {() =>{( <h1 style={{color:'white', textAlign: 'center'}}>404</h1>)}}></Route>

@@ -15,7 +15,7 @@ class GamerigScore extends Component {
     CPU {this.props.cpu}_<ProgressBar style={{backgroundColor: '#00ff9f'}} animated now={this.props.cpuscore}_ />
     GPU {this.props.gpu}_<ProgressBar style={{backgroundColor: '#00ff9f'}} animated now={this.props.gpuscore}_ />
     RAM {this.props.ram}_<ProgressBar style={{backgroundColor: '#00ff9f'}} animated now={this.props.ramscore}_ />
-    <Link to="/rig-builder"><Button variant="dark" className={styles.btnrig}>BUILD THIS RIG {/* <ArrowRight/> */}<Tools></Tools> </Button></Link>
+    <Link to="/rigbuilder"><Button variant="dark" className={styles.btnrig}>BUILD THIS RIG {/* <ArrowRight/> */}<Tools></Tools> </Button></Link>
     </div>
         )
     }

@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import axios from 'axios';
+
+var cpupricelist = []
 
 class Rigbuilder extends Component {
 
@@ -10,11 +13,18 @@ class Rigbuilder extends Component {
     }
 
     componentDidMount () {
+
+        axios.get('https://canirunit.herokuapp.com/cpuprices')
+        .then(response => {
+            cpupricelist = response.data
+        }).catch(err => {
+            console.log(err)
+        })
+
         this.setState({
-            cpu: this.props.gamecpufromprops,
+            cpu: 'Intel ' + this.props.gamecpufromprops,
             gpu: this.props.gamegpufromprops,
             ram: this.props.gamememfromprops
-
         })
 
     }
@@ -23,10 +33,18 @@ class Rigbuilder extends Component {
 
 
         return (
-            <div style={{textAlign: 'center'}}>
-            <h1>{this.state.cpu}</h1>
-            <h1>{this.state.gpu}</h1>
-            <h1>{this.state.ram}</h1>
+            <div style={{textAlign: 'center', fontFamily: 'Tomorrow'}}>
+            
+            {/* <h1>{this.state.gpu}</h1>
+            <h1>{this.state.ram}</h1> */}
+
+            {cpupricelist.map(cpu => {
+                if(cpu.CPU.substring(0, 16) == this.state.cpu.substring(0,16)){
+                    return <h1>{this.state.cpu}: {cpu.Price}</h1>
+                }
+            }) }
+
+
             </div>
         )
     }
