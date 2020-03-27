@@ -72,21 +72,21 @@ function ResponsiveDrawer(props) {
     
 
   let items = (
-    <div style={{fontFamily: 'Akronim'}}>
+    <div style={{fontFamily: 'Tomorrow'}}>
       <List>
-        <ListItem ><Link to='/signin' style={{textDecoration: 'none', color: 'green'}} onClick={() => handleDrawerToggle()}>Sign-In</Link></ListItem>
-        <ListItem ><Link to='/signup' style={{textDecoration: 'none', color: 'green'}} onClick={() => handleDrawerToggle()}>Sign-Up</Link></ListItem>:
+        <ListItem ><Link to='/signin' style={{textDecoration: 'none', color: '#050a0e'}} onClick={() => handleDrawerToggle()}>Sign-In</Link></ListItem>
+        <ListItem ><Link to='/signup' style={{textDecoration: 'none', color: '#050a0e'}} onClick={() => handleDrawerToggle()}>Sign-Up</Link></ListItem>:
     </List>
     </div>
   )
   if(props.user) {
     items = (
-      <div style={{fontFamily: 'Akronim'}}>
+      <div style={{fontFamily: 'Tomorrow'}}>
          <List>
-    <ListItem ><Link to='/userrigpost' style={{textDecoration: 'none', color: 'green'}} onClick={() => handleDrawerToggle()}>Create Rig</Link></ListItem>
-        <ListItem ><Link to='/myrig' style={{textDecoration: 'none', color: 'green'}} onClick={() => handleDrawerToggle()}>My Rig</Link></ListItem>
-        <ListItem ><Link to='/userprofile' style={{textDecoration: 'none', color: 'green'}} onClick={() => handleDrawerToggle()}>My Profile</Link></ListItem>
-        <ListItem ><Link to='/' style={{textDecoration: 'none', color: 'green'}} onClick={() => signout()}>Sign-Out</Link></ListItem>
+    <ListItem ><Link to='/userrigpost' style={{textDecoration: 'none', color: '#050a0e'}} onClick={() => handleDrawerToggle()}>Create Rig</Link></ListItem>
+        <ListItem ><Link to='/myrig' style={{textDecoration: 'none', color: '#050a0e'}} onClick={() => handleDrawerToggle()}>My Rig</Link></ListItem>
+        <ListItem ><Link to='/userprofile' style={{textDecoration: 'none', color: '#050a0e'}} onClick={() => handleDrawerToggle()}>My Profile</Link></ListItem>
+        <ListItem ><Link to='/' style={{textDecoration: 'none', color: '#050a0e'}} onClick={() => signout()}>Sign-Out</Link></ListItem>
       </List>
     </div>
     )
@@ -150,7 +150,7 @@ function ResponsiveDrawer(props) {
     <div className="Toolbox" style={{  fontFamily: 'Akronim' }}>
       <CssBaseline />
       <AppBar position="fixed" className={classes.appBar}>
-        <Toolbar style={{background: 'linear-gradient(to right, #000000, #0f9b0f)'}}>
+        <Toolbar style={{background: '#fcee09'}}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -160,7 +160,7 @@ function ResponsiveDrawer(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography  style={{  fontFamily: 'Akronim' }} variant="h6" noWrap>
+          <Typography  style={{  fontFamily: 'Tomorrow' }} variant="h6" noWrap>
           <Link to='/' style={{textDecoration: 'none'}}>Can I Run it</Link>
           </Typography>
         </Toolbar>

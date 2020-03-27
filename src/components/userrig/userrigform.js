@@ -1333,10 +1333,10 @@ class UserrigPost extends Component {
 
         return (
        
-       <div className="container">
+       <div className="container" style={{fontFamily: 'Tomorrow', marginTop: '5%'}}>
       
-           <form onSubmit={this.handlePost} className="white container">
-            <h5 className="grey-text text-darken-3" style={{ textAlign: 'center' }}>Create my Rig</h5>
+           <form onSubmit={this.handlePost} className="white container" style={{fontFamily: 'Tomorrow'}} >
+            <h5 className="grey-text text-darken-3" style={{ textAlign: 'center', fontFamily: 'Tomorrow' }}>Create my Rig</h5>
             
           
         {/*    <div className="input-field">

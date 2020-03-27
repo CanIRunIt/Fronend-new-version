@@ -51,11 +51,11 @@ class Signup extends Component{
 
     render() {
         return(
-            <div className="container" style={{marginTop: '9%'}}>
+            <div className="container" style={{marginTop: '9%', fontFamily: 'Tomorrow'}}>
             
-            <form className="white">
+            <form className="white" style={{fontFamily: 'Tomorrow'}}>
           
-            <h5 style={{marginBottom: '3px', textAlign: 'center'}}>Sign Up</h5>
+            <h5 style={{marginBottom: '3px', textAlign: 'center', fontFamily: 'Tomorrow'}}>Sign Up</h5>
             <label htmlFor="mail">e-mail</label>
             <input type ="text" id="mail" onChange={this.handleChnge}></input>
            

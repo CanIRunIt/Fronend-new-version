@@ -1419,7 +1419,7 @@ class Rigpost extends Component {
        
        <div className="container" class={styles}>
 
-       <div style={{/* color: 'white' *//* , fontFamily: 'ZCOOL QingKe HuangYou' */ textAlign:'center', marginTop: '8px'}}>
+       <div style={{color: '#050a0e',/* , fontFamily: 'ZCOOL QingKe HuangYou' */ textAlign:'center', marginTop: '8px'}}>
       
 
       <h1 style={{textAlign: 'center'/* , color: 'white' */, display: 'flex', justifyContent: 'space-around'}}  class={styles.topic}>Minimum requirements rig_</h1>
