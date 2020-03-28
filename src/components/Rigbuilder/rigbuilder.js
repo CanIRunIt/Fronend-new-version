@@ -41,10 +41,10 @@ class Rigbuilder extends Component {
 
             {cpupricelist.map(cpu => {
                 if(cpu.CPU.replace(' @','').substring(0, 21) == this.state.cpu.substring(0,21)){
-                    return <div><h1>{this.state.cpu}: Price comparison</h1>
+                    return <div style={{marginTop: '10px'}}><h1>{this.state.cpu}: Price comparison</h1>
                     <div /* style={{display: 'flex', justifyContent: 'center', width: '100%'}} */>
-                    <div /* style={{float: 'left', width: '50%'}} */><PricesCard company="newegg" price={cpu.Price}></PricesCard></div> 
-                    <div /* style={{float: 'left', width: '50%'}} */><PricesCard company="ali" price={cpu.Price}></PricesCard></div> </div>
+                    <div /* style={{float: 'left', width: '50%'}} */><PricesCard cpu={this.state.cpu} company="newegg" price={cpu.Price}></PricesCard></div> 
+                    <div /* style={{float: 'left', width: '50%'}} */><PricesCard cpu={this.state.cpu} company="ali" price={cpu.Price}></PricesCard></div> </div>
                            </div>
                 }
             }) }

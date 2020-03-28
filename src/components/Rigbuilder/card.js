@@ -22,7 +22,10 @@ const useStyles = makeStyles({
     fontFamily: 'Tomorrow',
     boxShadow: '10px 10px 5px grey',
     display: 'flex',
-    justifyContent: 'center'
+    justifyContent: 'center',
+ //   backgroundColor: 'deepOrange'
+    backgroundColor: 'theme.palette.primary.main',
+   color: 'theme.palette.primary.contrastText'
 
   },
   media: {
@@ -42,7 +45,7 @@ export default function PricesCard(props) {
         <CardMedia
           className={classes.media}
           image="https://i.gadgets360cdn.com/large/Intel_cpu_intel_1556609631590.jpg"
-          title="Contemplative Reptile"
+          title={props.cpu}
         />
         <CardContent >
           <div class={styles.rig} align="left">{props.company} <span className={styles.rigspecs}>{props.price}</span> </div>
