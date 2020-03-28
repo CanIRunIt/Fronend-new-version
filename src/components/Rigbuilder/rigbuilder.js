@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
+import PricesCard from './card';
 
 var cpupricelist = []
 
@@ -39,10 +40,17 @@ class Rigbuilder extends Component {
             <h1>{this.state.ram}</h1> */}
 
             {cpupricelist.map(cpu => {
-                if(cpu.CPU.substring(0, 16) == this.state.cpu.substring(0,16)){
-                    return <h1>{this.state.cpu}: {cpu.Price}</h1>
+                if(cpu.CPU.replace(' @','').substring(0, 21) == this.state.cpu.substring(0,21)){
+                    return <div><h1>{this.state.cpu}: Price comparison</h1>
+                    <div /* style={{display: 'flex', justifyContent: 'center', width: '100%'}} */>
+                    <div /* style={{float: 'left', width: '50%'}} */><PricesCard company="newegg" price={cpu.Price}></PricesCard></div> 
+                    <div /* style={{float: 'left', width: '50%'}} */><PricesCard company="ali" price={cpu.Price}></PricesCard></div> </div>
+                           </div>
                 }
             }) }
+
+            {/* <h1>{this.state.cpu}</h1> */}
+            
 
 
             </div>
