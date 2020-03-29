@@ -49,6 +49,17 @@ class Rigbuilder extends Component {
                 }
             }) }
 
+         {gpupricelist.map(gpu => {
+                if(gpu.GPU.replace(' @', '').substring(0, 16) == this.state.gpu.substring(0, 16)){
+                    return <div style={{marginTop: '10px'}}><h1>{this.state.gpu}: Price comparison</h1>
+                    <div>
+                        <div><PricesCard cpu={this.state.gpu} company="newegg" price={gpu.Price}></PricesCard> </div>
+                        <div><PricesCard cpu={this.state.gpu} company="ali" price={gpu.Price}></PricesCard> </div>
+                    </div>
+                    </div>
+                }
+            })}
+ 
             {/* <h1>{this.state.cpu}</h1> */}
             
 
