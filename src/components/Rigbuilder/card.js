@@ -42,11 +42,16 @@ export default function PricesCard(props) {
       <div className="container"/*  style={{textAlign: 'center', display: 'flex', justifyContent: 'center'}}  */>
     <Card className={classes.root} color="primary" style={{backgroundColor: 'deepOrange'}}>
       <CardActionArea>
+        {props.cpu[0] == 'G'?
         <CardMedia
           className={classes.media}
-          image="https://i.gadgets360cdn.com/large/Intel_cpu_intel_1556609631590.jpg"
+          image="https://www.geforce.com/sites/default/files-world/geforce-gtx-titan-style-6.png"
           title={props.cpu}
-        />
+        /> : <CardMedia
+        className={classes.media}
+        image="https://i.gadgets360cdn.com/large/Intel_cpu_intel_1556609631590.jpg"
+        title={props.cpu}
+      /> }
         <CardContent >
           <div class={styles.rig} align="left">{props.company} <span className={styles.rigspecs}>{props.price}</span> </div>
         </CardContent>
