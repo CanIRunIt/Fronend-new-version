@@ -64,8 +64,8 @@ class Rigbuilder extends Component {
         let checkoutsummary = null
 
         if(this.state.show){
-            checkoutsummary = <div style={{marginTop: '8px'}}>{checkouts.map(singlechekcout => {
-                return <div className="container"><Card><CardContent><h5>{singlechekcout.rigcomp} : {singlechekcout.compprice}</h5></CardContent></Card></div>
+            checkoutsummary = <div style={{marginBottom: '10px'}}>{checkouts.map(singlechekcout => {
+                return <div className="container"><Card style={{width: '356px'}}><CardContent><h5>{singlechekcout.rigcomp} : {singlechekcout.compprice}</h5></CardContent></Card></div>
                     
             })}</div>
                 
@@ -80,12 +80,13 @@ class Rigbuilder extends Component {
 
             {cpupricelist.map(cpu => {
                 if(cpu.CPU.replace(' @','').substring(0, 21) == this.state.cpu.substring(0,21)){
+                    let Price = cpu.Price
                     return <div style={{marginTop: '10px'}}><h1>{this.state.cpu}: Price comparison</h1>
                     <div /* style={{display: 'flex', justifyContent: 'center', width: '100%'}} */>
-                    <div /* style={{float: 'left', width: '50%'}} */><PricesCard cpu={this.state.cpu} company="newegg" price={cpu.Price}></PricesCard><span><IconButton aria-label="delete" size="large">
+                    <div /* style={{float: 'left', width: '50%'}} */><PricesCard cpu={this.state.cpu} company="newegg" price={cpu.Price}></PricesCard><span><IconButton onClick={() => this.plustoHandler(this.state.cpu, Price)} aria-label="delete" size="large">
           <Plus fontSize="inherit" />CART
         </IconButton></span></div> 
-                    <div /* style={{float: 'left', width: '50%'}} */><PricesCard cpu={this.state.cpu} company="ali" price={cpu.Price}></PricesCard><span><IconButton aria-label="delete" size="large">
+                    <div /* style={{float: 'left', width: '50%'}} */><PricesCard cpu={this.state.cpu} company="ali" price={cpu.Price}></PricesCard><span><IconButton onClick={() => this.plustoHandler(this.state.cpu, Price)} aria-label="delete" size="large">
           <Plus fontSize="inherit" />CART
         </IconButton></span></div> </div>
                            </div>
@@ -100,14 +101,14 @@ class Rigbuilder extends Component {
                         <div><PricesCard cpu={this.state.gpu} company="newegg" price={gpu.Price}></PricesCard><span><IconButton onClick={() => this.plustoHandler(this.state.gpu, Price)} aria-label="delete" size="large">
           <Plus fontSize="inherit" />CART
         </IconButton></span> </div>
-                        <div><PricesCard cpu={this.state.gpu} company="ali" price={gpu.Price}></PricesCard><span><IconButton aria-label="delete" size="large">
+                        <div><PricesCard cpu={this.state.gpu} company="ali" price={gpu.Price}></PricesCard><span><IconButton onClick={() => this.plustoHandler(this.state.gpu, Price)} aria-label="delete" size="large">
           <Plus fontSize="inherit" />CART
         </IconButton></span> </div>
                     </div>
                     </div>
                 }
             })}
-            <Button style={{backgroundColor: '#bd00ff', fontFamily: 'Tomorrow'}} onClick={() => this.showcheckout()}>CHECK THE SUM</Button>
+            <Button style={{backgroundColor: '#bd00ff', fontFamily: 'Tomorrow', marginBottom: '8px', marginTop: '8px'}} onClick={() => this.showcheckout()}>CHECK THE SUM</Button>
             {checkoutsummary}
  
             {/* <h1>{this.state.cpu}</h1> */}
