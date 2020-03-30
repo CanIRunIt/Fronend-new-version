@@ -4,6 +4,7 @@ import axios from 'axios';
 import PricesCard from './card';
 
 var cpupricelist = []
+var gpupricelist = []
 
 class Rigbuilder extends Component {
 
@@ -18,6 +19,13 @@ class Rigbuilder extends Component {
         axios.get('https://canirunit.herokuapp.com/cpuprices')
         .then(response => {
             cpupricelist = response.data
+        }).catch(err => {
+            console.log(err)
+        })
+
+        axios.get('https://canirunit.herokuapp.com/gpuprices')
+        .then(response => {
+            gpupricelist = response.data
         }).catch(err => {
             console.log(err)
         })
