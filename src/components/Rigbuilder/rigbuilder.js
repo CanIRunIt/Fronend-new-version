@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios';
 import PricesCard from './card';
+import { Button, IconButton } from '@material-ui/core';
+import { Plus } from 'react-bootstrap-icons';
 
 var cpupricelist = []
 var gpupricelist = []
@@ -51,8 +53,12 @@ class Rigbuilder extends Component {
                 if(cpu.CPU.replace(' @','').substring(0, 21) == this.state.cpu.substring(0,21)){
                     return <div style={{marginTop: '10px'}}><h1>{this.state.cpu}: Price comparison</h1>
                     <div /* style={{display: 'flex', justifyContent: 'center', width: '100%'}} */>
-                    <div /* style={{float: 'left', width: '50%'}} */><PricesCard cpu={this.state.cpu} company="newegg" price={cpu.Price}></PricesCard></div> 
-                    <div /* style={{float: 'left', width: '50%'}} */><PricesCard cpu={this.state.cpu} company="ali" price={cpu.Price}></PricesCard></div> </div>
+                    <div /* style={{float: 'left', width: '50%'}} */><PricesCard cpu={this.state.cpu} company="newegg" price={cpu.Price}></PricesCard><span><IconButton aria-label="delete" size="large">
+          <Plus fontSize="inherit" />CART
+        </IconButton></span></div> 
+                    <div /* style={{float: 'left', width: '50%'}} */><PricesCard cpu={this.state.cpu} company="ali" price={cpu.Price}></PricesCard><span><IconButton aria-label="delete" size="large">
+          <Plus fontSize="inherit" />CART
+        </IconButton></span></div> </div>
                            </div>
                 }
             }) }
@@ -61,8 +67,12 @@ class Rigbuilder extends Component {
                 if(gpu.GPU.replace(' @', '').substring(0, 16) == this.state.gpu.substring(0, 16)){
                     return <div style={{marginTop: '10px'}}><h1>{this.state.gpu}: Price comparison</h1>
                     <div>
-                        <div><PricesCard cpu={this.state.gpu} company="newegg" price={gpu.Price}></PricesCard> </div>
-                        <div><PricesCard cpu={this.state.gpu} company="ali" price={gpu.Price}></PricesCard> </div>
+                        <div><PricesCard cpu={this.state.gpu} company="newegg" price={gpu.Price}></PricesCard><span><IconButton aria-label="delete" size="large">
+          <Plus fontSize="inherit" />CART
+        </IconButton></span> </div>
+                        <div><PricesCard cpu={this.state.gpu} company="ali" price={gpu.Price}></PricesCard><span><IconButton aria-label="delete" size="large">
+          <Plus fontSize="inherit" />CART
+        </IconButton></span> </div>
                     </div>
                     </div>
                 }
