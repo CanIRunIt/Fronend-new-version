@@ -73,10 +73,10 @@ class Rigbuilder extends Component {
         let checkoutsummary = null
 
         if(this.state.show){
-            checkoutsummary = <div style={{marginBottom: '10px'}}>{checkouts.map(singlechekcout => {
-                return <div className="container"><Card style={{width: '356px'}}><CardContent><h5>{singlechekcout.rigcomp} : {singlechekcout.compprice}</h5><div><h5>sum : {this.state.sum}</h5></div></CardContent></Card></div>
+            checkoutsummary = <div style={{marginBottom: '10px', display: 'inline', justifyContent: 'space-around'}}>{checkouts.map(singlechekcout => {
+                return <div className="container"><Card style={{width: '356px'}}><CardContent><h5>{singlechekcout.rigcomp} : {singlechekcout.compprice}</h5></CardContent></Card></div>
                     
-            })}</div>
+            })}<div><h5>sum: {this.state.sum}</h5></div> </div>
                 
         }
 
