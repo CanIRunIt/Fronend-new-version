@@ -16,7 +16,7 @@ class Rigbuilder extends Component {
         gpu: '',
         ram: '',
         show: false,
-        sum: ''
+        sum: 0
 
     }
 
@@ -54,9 +54,10 @@ class Rigbuilder extends Component {
         
 
         var newsum = this.state.sum
+         
 
         this.setState({
-            sum: newsum + price
+            sum: parseFloat(newsum) + parseFloat(price)
         })
 
     }
