@@ -74,7 +74,7 @@ class Rigbuilder extends Component {
 
         if(this.state.show){
             checkoutsummary = <div style={{marginBottom: '10px', display: 'inline', justifyContent: 'space-around'}}>{checkouts.map(singlechekcout => {
-                return <div className="container"><Card style={{width: '356px'}}><CardContent><h5>{singlechekcout.rigcomp} : {singlechekcout.compprice}</h5></CardContent></Card></div>
+                return <div style={{ display: 'flex', justifyContent: 'space-around'}} className="container"><Card style={{width: '356px'}}><CardContent><h5>{singlechekcout.rigcomp} : {singlechekcout.compprice}</h5></CardContent></Card></div>
                     
             })}<div><h5>sum: {this.state.sum}</h5></div> </div>
                 
