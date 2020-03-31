@@ -16,6 +16,7 @@ class Rigbuilder extends Component {
         gpu: '',
         ram: '',
         show: false,
+        sum: ''
 
     }
 
@@ -50,6 +51,13 @@ class Rigbuilder extends Component {
         }
 
         checkouts.push(unitprice)
+        
+
+        var newsum = this.state.sum
+
+        this.setState({
+            sum: newsum + price
+        })
 
     }
 
@@ -65,7 +73,7 @@ class Rigbuilder extends Component {
 
         if(this.state.show){
             checkoutsummary = <div style={{marginBottom: '10px'}}>{checkouts.map(singlechekcout => {
-                return <div className="container"><Card style={{width: '356px'}}><CardContent><h5>{singlechekcout.rigcomp} : {singlechekcout.compprice}</h5></CardContent></Card></div>
+                return <div className="container"><Card style={{width: '356px'}}><CardContent><h5>{singlechekcout.rigcomp} : {singlechekcout.compprice}</h5><div><h5>sum : {this.state.sum}</h5></div></CardContent></Card></div>
                     
             })}</div>
                 
