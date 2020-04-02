@@ -161,7 +161,8 @@ progressHandler() {
             <input type ="text" id="game" onChange={this.handleChnge} style={{color: 'white'}}></input>
             </div> */
           
-   gamesjsonsort.map((game,title) => {
+   /* gamesjsonsort.map((game,title) => { */
+    this.props.gamelistfromprops.map((game, title) => {
      if(game.title[0] == this.state.first){
        
       
@@ -208,6 +209,12 @@ progressHandler() {
 }
 
 
+const mapSToProps = (state) => {
+  return {
+    gamelistfromprops: state.gamelistsort
+  }
+}
+
 const mapDispatchToProps = dispatch => {
   return {
     onCpuSet: (cpu) => dispatch({type: 'GAMECPU', value: cpu}),
@@ -216,7 +223,7 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-export default connect(null,mapDispatchToProps)(Gameselect);
+export default connect(/* null */mapSToProps,mapDispatchToProps)(Gameselect);
 
 
 

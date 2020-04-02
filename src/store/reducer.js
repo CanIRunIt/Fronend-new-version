@@ -11,8 +11,10 @@ const initrig = {
     },
     cpu: 'Intel i3',
     gpu: 'R7 240',
-    ram: '8 gb'
-
+    ram: '8 gb',
+    //
+    gamelistsort: []
+    //
 }
 
 
@@ -53,7 +55,6 @@ const reducer = (state = initrig, action) => {
     }
 
 
-
     if(action.type === 'GAMECPU') {
         return {
             ...state,
@@ -76,6 +77,16 @@ const reducer = (state = initrig, action) => {
             ram: action.value
         }
     }
+
+     //    //
+    if(action.type === 'GAMESET') {
+        return {
+            ...state.gamelistsort,
+            gamelistsort: action.value
+        }
+    }
+    //    // 
+
 
 
     return state;

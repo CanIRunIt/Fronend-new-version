@@ -28,7 +28,8 @@ import Rigbuilder from './components/Rigbuilder/rigbuilder';
 
 
 //"default1": "imgstore-e819d"
-
+var gamesjson = []
+var gamesjsonsort = []
 
 class App extends Component {
 
@@ -36,7 +37,8 @@ class App extends Component {
   super();
 
   this.state = ({
-    useremail: ''
+    useremail: '',
+    gamelist: []
   })
 
   this.authListner = this.authListner.bind(this);
@@ -50,7 +52,24 @@ class App extends Component {
     }).catch(err => {
       console.log(err)
     })
-  }
+
+
+  //game array //  
+     axios.get('https://canirunit.herokuapp.com/results')
+    .then(response => {
+      console.log(response)
+      gamesjson = response.data
+      gamesjsonsort = gamesjson.sort(function(x,y) {
+        if(x.title < y.title) {return -1;}
+        if(x.title > y.title) {return 1;}
+        return 0;
+      })
+      this.setState({
+        gamelist: gamesjsonsort
+      }, () => this.props.onGameset(gamesjsonsort) )
+  }) 
+  //                //
+}
 
   authListner() {
     fire.auth().onAuthStateChanged((user) => {
@@ -113,7 +132,8 @@ class App extends Component {
 
 const mapDispatchToProps = dispatch => {
   return {
-      onUserset: (mail) => dispatch({type: 'USERSET', value: mail})
+      onUserset: (mail) => dispatch({type: 'USERSET', value: mail}),
+      onGameset: (gamelist) => dispatch({type: 'GAMESET', value: gamelist})
   };
 };
 
